@@ -30,4 +30,4 @@ else()
 endif()
 
 add_library(graphgeometry ${LIB_TYPE} ${HEADERS} ${SOURCES})
-target_include_directories(graphgeometry PRIVATE ${HEADERS_DIR})
+target_include_directories(graphgeometry PUBLIC ${HEADERS_DIR})
