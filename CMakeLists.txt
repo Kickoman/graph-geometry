@@ -31,3 +31,9 @@ endif()
 
 add_library(graphgeometry ${LIB_TYPE} ${HEADERS} ${SOURCES})
 target_include_directories(graphgeometry PUBLIC ${HEADERS_DIR})
+
+set_target_properties(
+    graphgeometry PROPERTIES
+    ENABLE_EXPORTS 1
+    WINDOWS_EXPORT_ALL_SYMBOLS 1
+)
