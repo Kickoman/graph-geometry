@@ -1,9 +1,10 @@
-#include "line.h"
-#include "twodvector.h"
+#include "2d/line.h"
+#include "2d/vector.h"
 
 #include "mathematics.h"
 
 namespace GraphGeometry {
+namespace TwoD {
 
 Line::Line() = default;
 Line::Line(double a, double b, double c)
@@ -34,7 +35,7 @@ Line::Line(Point a, Point b)
     }
 }
 
-Line::Line(Point a, TwoDVector directionVector)
+Line::Line(Point a, Vector directionVector)
 {
     _a = directionVector.y();
     _b = -directionVector.x();
@@ -70,5 +71,5 @@ Point Line::intersection(const Line &other, bool *ok) const
     return {x, y};
 }
 
-
-}
+}   // TwoD
+}   // GraphGeometry

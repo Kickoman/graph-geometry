@@ -1,10 +1,11 @@
 #ifndef LINE_H
 #define LINE_H
 
-#include "point.h"
-#include "twodvector.h"
+#include "2d/point.h"
+#include "2d/vector.h"
 
 namespace GraphGeometry {
+namespace TwoD {
 
 ///
 /// \brief The Line class represents a straight line
@@ -20,7 +21,7 @@ public:
     /// \brief By two points
     Line(Point a, Point b);
     /// \brief By the point and the direction vector
-    Line(Point a, TwoDVector directionVector);
+    Line(Point a, Vector directionVector);
 
     // Standard form line equation
     ///
@@ -75,6 +76,7 @@ private:
     double _c = 0;
 };
 
-}
+}   // TwoD
+}   // GraphGeometry
 
 #endif // LINE_H

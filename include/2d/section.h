@@ -1,9 +1,10 @@
-#ifndef SECTION_H
-#define SECTION_H
+#ifndef GEOMETRY_SECTION_2D_H
+#define GEOMETRY_SECTION_2D_H
 
-#include "point.h"
+#include "2d/point.h"
 
 namespace GraphGeometry {
+namespace TwoD {
 
 class Section
 {
@@ -55,6 +56,7 @@ private:
     Point _start{};
     Point _end{};
 };
-}
+}   // TwoD
+}   // GraphGeometry
 
-#endif // SECTION_H
+#endif // GEOMETRY_SECTION_2D_H

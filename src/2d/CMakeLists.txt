@@ -1,0 +1,8 @@
+set(GEOMETRY_2D_SOURCES
+
+    ${CMAKE_CURRENT_LIST_DIR}/point.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/line.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/section.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/vector.cpp
+
+PARENT_SCOPE)

@@ -1,9 +1,10 @@
-#include "section.h"
-#include "line.h"
+#include "2d/section.h"
+#include "2d/line.h"
 
 #include "mathematics.h"
 
 namespace GraphGeometry {
+namespace TwoD {
 
 bool Section::has(Point a) const
 {
@@ -35,4 +36,5 @@ Point Section::intersection(const Section &other, bool *ok) const
     if (ok) *ok = found;
     return linesIntersectionPoint;
 }
-}
+}   // TwoD
+}   // GraphGeometry

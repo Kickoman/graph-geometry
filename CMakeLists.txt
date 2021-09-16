@@ -13,23 +13,24 @@ endif()
 set(HEADERS_DIR include/)
 set(SOURCES_DIR src/)
 
+add_subdirectory(${HEADERS_DIR}/2d/)
+add_subdirectory(${SOURCES_DIR}/2d/)
+
+message("Geometry headers: ${GEOMETRY_2D_HEADERS}")
+
 set(HEADERS
-    ${HEADERS_DIR}/line.h
-    ${HEADERS_DIR}/section.h
-    ${HEADERS_DIR}/twodvector.h
-    ${HEADERS_DIR}/point.h
+    ${GEOMETRY_2D_HEADERS}
+
     ${HEADERS_DIR}/mathematics.h
 )
 
 set(SOURCES
-    ${SOURCES_DIR}/line.cpp
-    ${SOURCES_DIR}/section.cpp
-    ${SOURCES_DIR}/twodvector.cpp
-    ${SOURCES_DIR}/point.cpp
+    ${GEOMETRY_2D_SOURCES}
 )
 
 add_library(graphgeometry ${GRAPH_GEOMETRY_LIB_TYPE} ${HEADERS} ${SOURCES})
-target_include_directories(graphgeometry PUBLIC ${HEADERS_DIR})
+target_include_directories(graphgeometry PUBLIC ${HEADERS_DIR} ${GEOMETRY_2D_INCLUDEDIR})
+message("include directory: ${GEOMETRY_2D_INCLUDEDIR}")
 
 set_target_properties(
     graphgeometry PROPERTIES
