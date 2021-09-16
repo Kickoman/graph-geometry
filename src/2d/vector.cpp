@@ -1,4 +1,5 @@
 #include "2d/vector.h"
+#include "mathematics.h"
 
 namespace GraphGeometry {
 namespace TwoD {

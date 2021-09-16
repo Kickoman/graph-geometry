@@ -2,24 +2,9 @@
 #define GEOMETRY_VECTOR_2D_H
 
 #include "2d/point.h"
-#define _USE_MATH_DEFINES
-#include <math.h>
 
 namespace GraphGeometry {
 namespace TwoD {
-
-///
-/// \brief Converts radians to degrees
-/// \param rad angle in radians
-/// \return the same angle in degrees
-///
-inline double rad_to_deg(double rad) { return (rad * 180) / M_PI; }
-///
-/// \brief Converts degrees to radians
-/// \param deg angle in degrees
-/// \return the same angle in radians
-///
-inline double deg_to_rad(double deg) { return (deg * M_PI) / 180; }
 
 class Vector
 {
