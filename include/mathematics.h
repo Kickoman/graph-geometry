@@ -6,7 +6,7 @@
 
 inline bool fuzzyCompare(double a, double b)
 {
-    return abs(a - b) < 1e7;
+    return std::abs(a - b) < 1e-7;
 }
 
 #endif // MATHEMATICS_H
