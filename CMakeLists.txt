@@ -15,17 +15,19 @@ set(SOURCES_DIR src/)
 
 add_subdirectory(${HEADERS_DIR}/2d/)
 add_subdirectory(${SOURCES_DIR}/2d/)
-
-message("Geometry headers: ${GEOMETRY_2D_HEADERS}")
+add_subdirectory(${HEADERS_DIR}/3d/)
+add_subdirectory(${SOURCES_DIR}/3d/)
 
 set(HEADERS
     ${GEOMETRY_2D_HEADERS}
+    ${GEOMETRY_3D_HEADERS}
 
     ${HEADERS_DIR}/mathematics.h
 )
 
 set(SOURCES
     ${GEOMETRY_2D_SOURCES}
+    ${GEOMETRY_3D_SOURCES}
 )
 
 add_library(graphgeometry ${GRAPH_GEOMETRY_LIB_TYPE} ${HEADERS} ${SOURCES})
