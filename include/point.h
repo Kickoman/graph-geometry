@@ -1,9 +1,11 @@
 #ifndef POINT_H
 #define POINT_H
 
+#include "../graphgeometry_global.h"
+
 namespace GraphGeometry {
 
-class Point
+class GRAPHGEOMETRY_EXPORT Point
 {
 public:
     Point();

@@ -2,8 +2,10 @@ TEMPLATE = lib
 QT += core
 CONFIG += c++11
 TARGET = GraphGeometry
+DEFINES += GRAPHGEOMETRY_LIBRARY
 
 HEADERS += \
+    graphgeometry_global.h \
     include/line.h   \
     include/mathematics.h       \
     include/point.h   \
@@ -31,4 +33,6 @@ DESTDIR     = "$$OUTPUT_DIR/bin/"
 
 message("libGraphGeometry library (.so) will be placed at: $$DESTDIR")
 
-INCLUDEPATH += include/
+INCLUDEPATH += \
+    include/ \
+    $$PWD/

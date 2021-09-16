@@ -12,15 +12,15 @@ namespace GraphGeometry {
 /// \param rad angle in radians
 /// \return the same angle in degrees
 ///
-inline double rad_to_deg(double rad) { return (rad * 180) / M_PI; }
+inline double GRAPHGEOMETRY_EXPORT rad_to_deg(double rad) { return (rad * 180) / M_PI; }
 ///
 /// \brief Converts degrees to radians
 /// \param deg angle in degrees
 /// \return the same angle in radians
 ///
-inline double deg_to_rad(double deg) { return (deg * M_PI) / 180; }
+inline double GRAPHGEOMETRY_EXPORT deg_to_rad(double deg) { return (deg * M_PI) / 180; }
 
-class TwoDVector
+class GRAPHGEOMETRY_EXPORT TwoDVector
 {
 public:
     ///
@@ -101,8 +101,8 @@ private:
     double _y = 0;
 };
 
-TwoDVector operator*(GraphGeometry::TwoDVector v, double number);
-TwoDVector operator/(GraphGeometry::TwoDVector v, double number);
+TwoDVector GRAPHGEOMETRY_EXPORT operator*(GraphGeometry::TwoDVector v, double number);
+TwoDVector GRAPHGEOMETRY_EXPORT operator/(GraphGeometry::TwoDVector v, double number);
 
 }
 #endif // TWODVECTOR_H

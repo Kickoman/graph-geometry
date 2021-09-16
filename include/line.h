@@ -1,6 +1,7 @@
 #ifndef LINE_H
 #define LINE_H
 
+#include "../graphgeometry_global.h"
 #include "point.h"
 #include "twodvector.h"
 
@@ -9,7 +10,7 @@ namespace GraphGeometry {
 ///
 /// \brief The Line class represents a straight line
 ///
-class Line
+class GRAPHGEOMETRY_EXPORT Line
 {
 public:
     Line();

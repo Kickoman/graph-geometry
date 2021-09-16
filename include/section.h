@@ -5,7 +5,7 @@
 
 namespace GraphGeometry {
 
-class Section
+class GRAPHGEOMETRY_EXPORT Section
 {
 public:
     /// \brief Constructs zero-length section
