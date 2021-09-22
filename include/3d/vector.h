@@ -26,6 +26,7 @@ public:
 
     double dotProduct(const Vector &other) const;
     double magnitude() const;
+    Vector normalized() const;
 
     Vector rotateDeg(double degrees, Axis axis) const;
     Vector rotateRad(double radians, Axis axis) const;
@@ -42,6 +43,7 @@ private:
 
 Vector operator*(const Vector &v, double number);
 Vector operator/(const Vector &v, double number);
+Point operator+(const Point &point, const Vector &vector);
 
 } // D3
 } // GraphGeometry

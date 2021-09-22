@@ -68,6 +68,11 @@ double Vector::magnitude() const
     return sqrt(_x*_x + _y*_y + _z*_z);
 }
 
+Vector Vector::normalized() const
+{
+    return divide(magnitude());
+}
+
 Vector Vector::rotateDeg(double degrees, Axis axis) const
 {
     return rotateRad(deg_to_rad(degrees), axis);
@@ -130,6 +135,15 @@ Vector operator*(const Vector &v, double number)
 Vector operator/(const Vector &v, double number)
 {
     return v.divide(number);
+}
+
+Point operator+(const Point &point, const Vector &vector)
+{
+    return {
+        point.x() + vector.x(),
+        point.y() + vector.y(),
+        point.z() + vector.z()
+    };
 }
 
 }
