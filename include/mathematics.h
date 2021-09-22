@@ -27,6 +27,13 @@ inline double rad_to_deg(double rad) { return (rad * 180) / GraphGeometry::PI; }
 ///
 inline double deg_to_rad(double deg) { return (deg * GraphGeometry::PIl) / 180; }
 
+enum class Axis
+{
+    X,
+    Y,
+    Z
+};
+
 }
 
 #endif // MATHEMATICS_H

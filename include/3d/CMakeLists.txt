@@ -1,6 +1,7 @@
 set(GEOMETRY_3D_HEADERS
 
     ${CMAKE_CURRENT_LIST_DIR}/point.h
+    ${CMAKE_CURRENT_LIST_DIR}/vector.h
 
 PARENT_SCOPE)
 
