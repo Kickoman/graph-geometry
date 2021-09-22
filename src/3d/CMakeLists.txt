@@ -2,5 +2,6 @@ set(GEOMETRY_3D_SOURCES
 
     ${CMAKE_CURRENT_LIST_DIR}/point.cpp
     ${CMAKE_CURRENT_LIST_DIR}/vector.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ray.cpp
 
 PARENT_SCOPE)
