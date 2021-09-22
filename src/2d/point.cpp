@@ -1,7 +1,7 @@
 #include "2d/point.h"
 
 namespace GraphGeometry {
-namespace TwoD {
+namespace D2 {
 
 Point::Point()
     = default;
@@ -19,5 +19,5 @@ double Point::y() const
     return _y;
 }
 
-}   // TwoD
+}   // D2
 }   // GraphGeometry

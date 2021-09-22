@@ -5,7 +5,7 @@
 #include "2d/vector.h"
 
 namespace GraphGeometry {
-namespace TwoD {
+namespace D2 {
 
 ///
 /// \brief The Line class represents a straight line
@@ -76,7 +76,7 @@ private:
     double _c = 0;
 };
 
-}   // TwoD
+}   // D2
 }   // GraphGeometry
 
 #endif // LINE_H

@@ -4,7 +4,7 @@
 #include "mathematics.h"
 
 namespace GraphGeometry {
-namespace TwoD {
+namespace D2 {
 
 Line::Line() = default;
 Line::Line(double a, double b, double c)
@@ -71,5 +71,5 @@ Point Line::intersection(const Line &other, bool *ok) const
     return {x, y};
 }
 
-}   // TwoD
+}   // D2
 }   // GraphGeometry

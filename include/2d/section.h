@@ -4,7 +4,7 @@
 #include "2d/point.h"
 
 namespace GraphGeometry {
-namespace TwoD {
+namespace D2 {
 
 class Section
 {
@@ -56,7 +56,7 @@ private:
     Point _start{};
     Point _end{};
 };
-}   // TwoD
+}   // D2
 }   // GraphGeometry
 
 #endif // GEOMETRY_SECTION_2D_H

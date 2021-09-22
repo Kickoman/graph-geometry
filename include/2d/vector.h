@@ -4,7 +4,7 @@
 #include "2d/point.h"
 
 namespace GraphGeometry {
-namespace TwoD {
+namespace D2 {
 
 class Vector
 {
@@ -90,6 +90,6 @@ private:
 Vector operator*(Vector v, double number);
 Vector operator/(Vector v, double number);
 
-}   // TwoD
+}   // D2
 }   // GraphGeometry
 #endif // GEOMETRY_VECTOR_2D_H

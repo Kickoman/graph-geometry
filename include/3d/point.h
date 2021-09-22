@@ -2,7 +2,7 @@
 #define GEOMETRY_POINT_3D_H
 
 namespace GraphGeometry {
-namespace ThreeD {
+namespace D3 {
 
 class Point
 {

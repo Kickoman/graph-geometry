@@ -2,7 +2,7 @@
 #include "mathematics.h"
 
 namespace GraphGeometry {
-namespace TwoD {
+namespace D2 {
 
 Vector::Vector() = default;
 Vector::Vector(double x, double y) : _x(x), _y(y) {}
@@ -72,5 +72,5 @@ Vector operator/(Vector v, double number)
     return v.divide(number);
 }
 
-}   // TwoD
+}   // D2
 }   // GraphGeometry

@@ -2,7 +2,7 @@
 #define GEOMETRY_POINT_2D_H
 
 namespace GraphGeometry {
-namespace TwoD {
+namespace D2 {
 
 class Point
 {
@@ -19,6 +19,6 @@ private:
     double _y{};
 };
 
-}   // TwoD
+}   // D2
 }   // GraphGeometry
 #endif // GEOMETRY_POINT_2D_H
