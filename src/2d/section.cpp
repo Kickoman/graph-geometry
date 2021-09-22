@@ -6,7 +6,7 @@
 namespace GraphGeometry {
 namespace D2 {
 
-bool Section::has(Point a) const
+bool Section::has(const Point &a) const
 {
     Line l(this->start(), this->end());
     double max_x = std::fmax(_start.x(), _end.x());

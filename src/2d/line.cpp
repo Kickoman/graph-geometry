@@ -21,7 +21,7 @@ Line::Line(double k, double b)
         _c *= -1;
     }
 }
-Line::Line(Point a, Point b)
+Line::Line(const Point &a, const Point &b)
 {
     _a = b.y() - a.y();
     _b = a.x() - b.x();
@@ -35,7 +35,7 @@ Line::Line(Point a, Point b)
     }
 }
 
-Line::Line(Point a, Vector directionVector)
+Line::Line(const Point &a, const Vector &directionVector)
 {
     _a = directionVector.y();
     _b = -directionVector.x();
@@ -55,7 +55,7 @@ double Line::C() const { return _c; }
 double Line::k() const { return _b < 0 ? _a : -_a; }
 double Line::b() const { return _b < 0 ? _c : -_c; }
 
-bool Line::has(Point p) const { return fuzzyCompare(_a * p.x() + _b * p.y() + _c, 0); }
+bool Line::has(const Point &p) const { return fuzzyCompare(_a * p.x() + _b * p.y() + _c, 0); }
 
 Point Line::intersection(const Line &other, bool *ok) const
 {

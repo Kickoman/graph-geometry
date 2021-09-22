@@ -6,19 +6,19 @@ namespace D2 {
 
 Vector::Vector() = default;
 Vector::Vector(double x, double y) : _x(x), _y(y) {}
-Vector::Vector(Point from, Point to)
+Vector::Vector(const Point &from, const Point &to)
     : _x(to.x() - from.x()), _y(to.y() - from.y()) {}
 
 double Vector::x() const { return _x; }
 double Vector::y() const { return _y; }
 
-Vector &Vector::operator+=(Vector other)
+Vector &Vector::operator+=(const Vector &other)
 {
     _x += other._x;
     _y += other._y;
     return *this;
 }
-Vector Vector::operator+(Vector other) const
+Vector Vector::operator+(const Vector &other) const
 {
     Vector v;
     v._x = this->_x + other._x;
@@ -26,7 +26,7 @@ Vector Vector::operator+(Vector other) const
     return v;
 }
 
-double Vector::dotProduct(Vector other) const
+double Vector::dotProduct(const Vector &other) const
 {
     return this->_x * other._x + this->_y * other._y;
 }
@@ -62,12 +62,12 @@ Vector Vector::divide(double number) const
     return {x2, y2};
 }
 
-Vector operator*(Vector v, double number)
+Vector operator*(const Vector &v, double number)
 {
     return v.multiply(number);
 }
 
-Vector operator/(Vector v, double number)
+Vector operator/(const Vector &v, double number)
 {
     return v.divide(number);
 }

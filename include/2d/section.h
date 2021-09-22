@@ -16,7 +16,7 @@ public:
     /// \param a Section start point
     /// \param b Section finish point
     ///
-    Section(Point a, Point b) : _start(a), _end(b) {}
+    Section(const Point &a, const Point &b) : _start(a), _end(b) {}
     ///
     /// \brief Constructs section by two points' coordinates
     /// \param x1 Section start point x coordinate
@@ -30,19 +30,19 @@ public:
     /// \brief Getter for section start point
     /// \return Section start point
     ///
-    Point start() const { return _start; }
+    const Point &start() const { return _start; }
     ///
     /// \brief Getter for section finish point
     /// \return Section finish point
     ///
-    Point end() const { return _end; }
+    const Point &end() const { return _end; }
 
     ///
     /// \brief Checks if the point belongs to the section
     /// \param a The point to be checked
     /// \return true if the point belongs to the section, false otherwise
     ///
-    bool has(Point a) const;
+    bool has(const Point &a) const;
 
     ///
     /// \brief Finds the intersection point of two sectinos

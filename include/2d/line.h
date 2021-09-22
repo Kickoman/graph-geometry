@@ -19,9 +19,9 @@ public:
     /// \brief Slop-intercept form
     Line(double k, double b);
     /// \brief By two points
-    Line(Point a, Point b);
+    Line(const Point &a, const Point &b);
     /// \brief By the point and the direction vector
-    Line(Point a, Vector directionVector);
+    Line(const Point &a, const Vector &directionVector);
 
     // Standard form line equation
     ///
@@ -59,7 +59,7 @@ public:
     /// \param p point coordinates
     /// \return true if the point belongs to the line, false otherwise
     ///
-    bool has(Point p) const;
+    bool has(const Point &p) const;
 
     ///
     /// \brief Tries to find the intersection point between two lines

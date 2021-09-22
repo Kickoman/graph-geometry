@@ -24,7 +24,7 @@ public:
     /// \param from Start point
     /// \param to Finish point
     ///
-    Vector(Point from, Point to);
+    Vector(const Point &from, const Point &to);
     ///
     /// \brief Getter for vector's X coordinate
     /// \return x coordinate
@@ -40,19 +40,19 @@ public:
     /// \param other Another vector to be added to the current vector
     /// \return The sum of the current vector and the \a other vector
     ///
-    Vector &operator+=(Vector other);
+    Vector &operator+=(const Vector &other);
     ///
     /// \brief Overloaded operator for vectors addition
     /// \param other Another vector to be added to the current vector
     /// \return The sum of the current vector and the \a other vector
     ///
-    Vector operator+(Vector other) const;
+    Vector operator+(const Vector &other) const;
     ///
     /// \brief Returns "dot product" of two vectors
     /// \param other Another vector to be used in the dot product calculation
     /// \return The value of the dot product
     ///
-    double dotProduct(Vector other) const;
+    double dotProduct(const Vector &other) const;
     ///
     /// \brief Getter for the vector magnitude (length)
     /// \return Magnitude of vector
@@ -87,8 +87,8 @@ private:
     double _y = 0;
 };
 
-Vector operator*(Vector v, double number);
-Vector operator/(Vector v, double number);
+Vector operator*(const Vector &v, double number);
+Vector operator/(const Vector &v, double number);
 
 }   // D2
 }   // GraphGeometry
