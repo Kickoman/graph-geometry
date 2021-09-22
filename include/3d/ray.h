@@ -11,7 +11,7 @@ class Ray
 {
 public:
     Ray() = default;
-    Ray(Point origin, Vector direction);
+    Ray(const Point &origin, const Vector &direction);
 
     const Point &origin() const;
     const Vector &direction() const;

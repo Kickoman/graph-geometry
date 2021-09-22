@@ -3,7 +3,7 @@
 namespace GraphGeometry {
 namespace D3 {
 
-Ray::Ray(Point origin, Vector direction)
+Ray::Ray(const Point &origin, const Vector &direction)
     : _origin(origin)
     , _direction(direction / direction.magnitude())
 {}
