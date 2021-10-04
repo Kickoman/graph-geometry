@@ -82,6 +82,9 @@ public:
     /// \return New vector of the magnitude \a number size smaller than the previous one
     ///
     Vector divide(double number) const;
+
+    double angleToRadians(const Vector &other) const;
+    double angleToDegrees(const Vector &other) const;
 private:
     double _x = 0;
     double _y = 0;

@@ -3,6 +3,7 @@
 
 #include "mathematics.h"
 #include "3d/point.h"
+#include "2d/vector.h"
 
 namespace GraphGeometry {
 namespace D3 {
@@ -34,6 +35,7 @@ public:
     Vector divide(double number) const;
 
     Vector crossProduct(const Vector &other) const;
+    D2::Vector projection(BasicPlane axis) const;
 
 private:
     double _x{};

@@ -127,6 +127,21 @@ Vector Vector::crossProduct(const Vector &other) const
     };
 }
 
+D2::Vector Vector::projection(BasicPlane plane) const
+{
+    switch (plane)
+    {
+    case BasicPlane::XY:
+        return D2::Vector(_x, _y);
+    case BasicPlane::YZ:
+        return D2::Vector(_y, _z);
+    case BasicPlane::XZ:
+        return D2::Vector(_x, _z);
+    default:
+        throw std::out_of_range("Plane for 3D vector projections is out of range");
+    }
+}
+
 Vector operator*(const Vector &v, double number)
 {
     return v.multiply(number);

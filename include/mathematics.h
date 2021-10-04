@@ -34,6 +34,13 @@ enum class Axis
     Z
 };
 
+enum class BasicPlane
+{
+    XY,
+    YZ,
+    XZ
+};
+
 }
 
 #endif // MATHEMATICS_H

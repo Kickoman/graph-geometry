@@ -62,6 +62,18 @@ Vector Vector::divide(double number) const
     return {x2, y2};
 }
 
+double Vector::angleToRadians(const Vector &other) const
+{
+    const double dot = dotProduct(other);
+    const double det = _x * other._y - _y * other._x;
+    return atan2(det, dot);
+}
+
+double Vector::angleToDegrees(const Vector &other) const
+{
+    return rad_to_deg(angleToRadians(other));
+}
+
 Vector operator*(const Vector &v, double number)
 {
     return v.multiply(number);
