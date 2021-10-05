@@ -37,6 +37,8 @@ public:
     Vector crossProduct(const Vector &other) const;
     D2::Vector projection(BasicPlane axis) const;
 
+    operator Point() const;
+
 private:
     double _x{};
     double _y{};

@@ -139,6 +139,13 @@ D2::Vector Vector::projection(BasicPlane plane) const
     }
 }
 
+Vector::operator Point() const
+{
+    return Point{
+        _x, _y, _z
+    };
+}
+
 Vector operator*(const Vector &v, double number)
 {
     return v.multiply(number);
