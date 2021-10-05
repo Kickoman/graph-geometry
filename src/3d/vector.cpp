@@ -84,16 +84,13 @@ Vector Vector::rotateRad(double radians, Axis axis) const
     switch (axis)
     {
     case Axis::X:
-        v = D2::Vector(_y, _z);
-        v.rotateRad(radians);
+        v = D2::Vector(_y, _z).rotateRad(radians);
         return Vector(_x, v.x(), v.y());
     case Axis::Y:
-        v = D2::Vector(_x, _z);
-        v.rotateRad(radians);
+        v = D2::Vector(_x, _z).rotateRad(radians);
         return Vector(v.x(), _y, v.y());
     case Axis::Z:
-        v = D2::Vector(_x, _y);
-        v.rotateRad(radians);
+        v = D2::Vector(_x, _y).rotateRad(radians);
         return Vector(v.x(), v.y(), _z);
     }
     assert(false);
